@@ -1,0 +1,14 @@
+/* static/css/estilo.css */
+/* Garante que o corpo da página tenha um padding mínimo na parte inferior */
+body {
+    margin-bottom: 100px; /* Ajuste conforme a altura do seu footer */
+}
+
+/* Estilização do footer para garantir que ele não sobreponha o conteúdo */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Adiciona espaço acima do footer */
+}
