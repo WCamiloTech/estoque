@@ -10,36 +10,27 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- Seu arquivo de estilos personalizados -->
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-    <!-- Adicionais CSS do Bootstrap, se necessário -->
-    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}"> -->
-    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}"> -->
-
 </head>
 <body>
     <header>
         <h1>Bem-vindo ao Sistema de Controle de Estoque</h1>
-        <nav>
-            <nav class="navbar navbar-expand navbar-dark bg-dark">
-                <div class="collapse navbar-collapse" id="navbarsExample02">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'home' %}">
-                                Início
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'adicionar_produto' %}">
-                                Adicionar Produto
-                            </a>
-                        </li>
-                        <!-- Mais itens de navegação aqui, se necessário -->
-                    </ul>
-                </div>
-            </nav>
-            
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">
+                            Início
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'adicionar_produto' %}">
+                            Adicionar Produto
+                        </a>
+                    </li>
+                    <!-- Mais itens de navegação aqui, se necessário -->
+                </ul>
+            </div>
         </nav>
     </header>
 

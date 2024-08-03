@@ -1,0 +1,11 @@
+<!-- templates/estoque/confirmar_remocao.html -->
+{% extends 'estoque/base.html' %}
+
+{% block content %}
+    <h2>Tem certeza de que deseja remover o produto "{{ produto.nome }}"?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Sim, remover produto" class="btn btn-danger">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

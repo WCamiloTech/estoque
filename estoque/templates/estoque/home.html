@@ -1,6 +1,26 @@
 {% extends 'estoque/base.html' %}
 
 {% block content %}
-<h2>Bem-vindo à Página Inicial</h2>
-<p>Este é o início do seu site de controle de estoque.</p>
+    <h2>Bem-vindo à Página Inicial</h2>
+    <p>Este é o início do seu site de controle de estoque.</p>
+
+    <!-- Lista de produtos -->
+    {% for produto in produtos %}
+        <div>
+            <!-- Detalhes do produto -->
+            <p>Nome: {{ produto.nome }}</p>
+            <p>Descrição: {{ produto.descricao }}</p>
+            <p>Preço: {{ produto.preco }}</p>
+            <p>Quantidade: {{ produto.quantidade }}</p>
+
+            <!-- Link de atualização -->
+            <a href="{% url 'atualizar_produto' pk=produto.pk %}" class="btn btn-primary">Atualizar</a>
+
+            <!-- Link de remoção com confirmação -->
+            <a href="{% url 'remover_produto' pk=produto.pk %}" class="btn btn-danger"
+               onclick="return confirm('Tem certeza que deseja remover este produto?');">
+               Remover
+            </a>
+        </div>
+    {% endfor %}
 {% endblock %}
